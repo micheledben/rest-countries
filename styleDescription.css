@@ -1,0 +1,213 @@
+:root {
+    --Dark-Blue: hsl(209, 23%, 22%);
+    /*(Dark Mode Elements)*/
+    --Very-Dark-Blue-BG: hsl(207, 26%, 17%);
+    /* (Dark Mode Background) */
+    --Very-Dark-Blue: hsl(200, 15%, 8%);
+    /* (Light Mode Text) */
+    --Dark-Gray: hsl(0, 0%, 52%);
+    /* (Light Mode Input) */
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+    /* (Light Mode Background) */
+    --White: hsl(0, 0%, 100%);
+    /* (Dark Mode Text & Light Mode Elements) */
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+body {
+    background-color: var(--Very-Light-Gray);
+    height: 100vh;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 100px;
+    background-color: white;
+    box-shadow: 0px -5px 10px gray;
+}
+
+.content-max {
+    padding: 30px 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.back {
+    display: flex;
+    padding: 15px 25px;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0px 0px 15px -10px gray;
+    background-color: white;
+    width: 150px;
+    justify-content: center;
+    margin: 25px 0px;
+    cursor: pointer;
+}
+
+.img-and-informations{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    gap: 120px;
+}
+
+.img-flag {
+    width: 47%;
+    height: 370px;
+}
+
+.informations-max h2{
+    margin-bottom: 35px;
+}
+
+.informations-max{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.informations{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+span{
+    color: var(--Dark-Gray);
+}
+
+.content-information{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 130px;
+    margin-bottom: 80px;
+}
+
+.bordersName{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.p-border-countries{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.spanBG {
+    max-width: 200px;
+    padding: 5px 10px;
+    background-color: white;
+    box-shadow: 0px 0px 15px -10px gray;
+    border-radius: 2px;
+    text-align: center;
+}
+
+.dark-mode-btn{
+    cursor: pointer;
+}
+
+/* -----------------------------DARK MODE-------------------------- */
+
+.dark-mode {
+    background-color: var(--Very-Dark-Blue-BG);
+}
+
+.dark-mode .content-max{
+    background-color: var(--Very-Dark-Blue-BG);
+    box-shadow: none;
+    color: white;
+}
+
+.dark-mode .header, .dark-mode .back, .dark-mode .spanBG{
+    background-color: var(--Dark-Blue);
+    box-shadow: 0px 0px 10px -2px black;
+    border: none;
+    color: white;
+}
+
+.dark-mode p{
+    font-weight: bolder;
+}
+
+.dark-mode span {
+    color: var(--Very-Light-Gray);
+    font-weight: lighter;
+    opacity: 0.8;
+}
+
+/* -----------------------------SMARTPHONE------------------------- */
+
+@media screen and (max-width: 700px){
+    .header{
+        padding: 30px 15px;
+        font-weight: bold;
+    }
+
+    .header h2{
+        font-size: 20px;
+        font-weight: bolder;
+    }
+
+    .back{
+        margin: 10px 0px;
+    }
+
+    .content-max{
+        padding: 30px;
+        font-size: 20px;
+    }
+
+    .img-and-informations{
+        flex-direction: column;
+        gap: 50px;
+    }
+    
+    .img-flag{
+        width: 100%;
+        height: 250px;
+    }
+
+    .content-information{
+        flex-direction: column;
+        gap: 50px;
+        margin-bottom: 50px;
+    }
+
+    .informations{
+        gap: 20px;
+        font-size: 18px;
+    }
+
+    .bordersName{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .spanBG {
+        max-width: 200px;
+        padding: 10px 30px;
+        font-size: 16px;
+    }
+    
+    .spanBG:first-child{
+        margin-left: 0px;
+    }
+
+    
+}
